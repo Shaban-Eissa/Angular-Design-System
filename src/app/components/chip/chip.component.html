@@ -1,0 +1,9 @@
+<div [ngClass]="{
+    'bg-blue-500': variant === 'primary',
+    'bg-gray-500': variant === 'secondary'
+  }" class="inline-flex items-center px-3 py-1 text-sm text-white rounded-full">
+    {{ label }}
+    <button *ngIf="removable" (click)="onRemove()" class="ml-2 focus:outline-none">
+        &times;
+    </button>
+</div>
