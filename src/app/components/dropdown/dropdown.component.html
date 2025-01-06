@@ -1,0 +1,11 @@
+<div class="relative inline-block text-left">
+    <button (click)="toggleDropdown()" class="px-4 py-2 text-white bg-blue-500 rounded-md">
+        {{ selectedOption || 'Select an option' }}
+    </button>
+    <div *ngIf="isOpen" class="absolute w-48 mt-2 bg-white rounded-md shadow-lg">
+        <div *ngFor="let option of options" (click)="selectOption(option)"
+            class="px-4 py-2 cursor-pointer hover:bg-gray-100">
+            {{ option }}
+        </div>
+    </div>
+</div>
