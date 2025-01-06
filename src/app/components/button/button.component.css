@@ -1,0 +1,11 @@
+.btn-primary {
+  @apply bg-blue-500 text-white hover:bg-blue-600 px-4 py-2 rounded-md;
+}
+
+.btn-secondary {
+  @apply bg-gray-500 text-white hover:bg-gray-600 px-4 py-2 rounded-md;
+}
+
+.btn-disabled {
+  @apply bg-gray-300 text-gray-500 cursor-not-allowed px-4 py-2 rounded-md;
+}

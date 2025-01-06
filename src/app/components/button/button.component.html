@@ -1,0 +1,43 @@
+<button [ngClass]="{
+    'bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-500': variant === 'primary',
+    'bg-gray-500 text-white hover:bg-gray-600 focus:ring-gray-500': variant === 'secondary',
+    'bg-green-500 text-white hover:bg-green-600 focus:ring-green-500': variant === 'success',
+    'bg-red-500 text-white hover:bg-red-600 focus:ring-red-500': variant === 'destructive',
+    'bg-blue-300 text-white hover:bg-blue-400 focus:ring-blue-300': variant === 'info',
+
+    'bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-50 focus:ring-blue-500': variant === 'outline-primary',
+    'bg-transparent border border-gray-500 text-gray-500 hover:bg-gray-50 focus:ring-gray-500': variant === 'outline-secondary',
+    'bg-transparent border border-green-500 text-green-500 hover:bg-green-50 focus:ring-green-500': variant === 'outline-success',
+    'bg-transparent border border-red-500 text-red-500 hover:bg-red-50 focus:ring-red-500': variant === 'outline-destructive',
+    'bg-transparent border border-blue-300 text-blue-300 hover:bg-blue-50 focus:ring-blue-300': variant === 'outline-info',
+
+    'rounded-full': rounded,
+    'rounded-md': !rounded,
+    'opacity-50 cursor-not-allowed': disabled,
+    'inline-flex items-center': true,
+    'px-4 py-2': !iconOnly,
+    'p-2': iconOnly
+  }" [disabled]="disabled"
+  class="text-sm font-medium transition-all focus:outline-none focus:ring-2 focus:ring-offset-2">
+  <!-- Left Icon -->
+  <span *ngIf="leftIcon" class="mr-2">
+    <ng-content select="[leftIcon]"></ng-content>
+  </span>
+
+  <!-- Label -->
+  <span *ngIf="!iconOnly" [ngClass]="{
+    'text-white': variant !== 'outline-primary' && variant !== 'outline-secondary' && variant !== 'outline-success' && variant !== 'outline-destructive' && variant !== 'outline-info',
+    'text-blue-500': variant === 'outline-primary',
+    'text-gray-500': variant === 'outline-secondary',
+    'text-green-500': variant === 'outline-success',
+    'text-red-500': variant === 'outline-destructive',
+    'text-blue-300': variant === 'outline-info'
+  }">
+    {{ label }}
+  </span>
+
+  <!-- Right Icon -->
+  <span *ngIf="rightIcon" class="ml-2">
+    <ng-content select="[rightIcon]"></ng-content>
+  </span>
+</button>
