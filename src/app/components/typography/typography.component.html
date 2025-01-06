@@ -1,0 +1,8 @@
+<p [ngClass]="{
+    'text-3xl font-bold': variant === 'h1',
+    'text-2xl font-bold': variant === 'h2',
+    'text-xl font-bold': variant === 'h3',
+    'text-base': variant === 'body'
+  }">
+    {{ text }}
+</p>
