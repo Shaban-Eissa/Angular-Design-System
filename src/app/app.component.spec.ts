@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'angular-design-system-components' title`, () => {
+  it(`should have the 'angular-design-system' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-design-system-components');
+    expect(app.title).toEqual('angular-design-system');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angular-design-system-components');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angular-design-system');
   });
 });
