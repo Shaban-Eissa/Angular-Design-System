@@ -1,0 +1,17 @@
+<div class="border divide-y divide-gray-200 rounded-md">
+    <div *ngFor="let item of items; let i = index" class="p-2">
+        <button (click)="toggle(i)"
+            class="flex items-center justify-between w-full px-4 py-2 text-left transition-colors rounded-md focus:outline-none hover:bg-gray-50">
+            <span class="font-medium text-gray-700">{{ item.title }}</span>
+            <svg [ngClass]="{
+            'transform rotate-180': item.isOpen
+          }" class="w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+        <div *ngIf="item.isOpen" class="px-4 py-2 text-gray-600 ">
+            {{ item.content }}
+        </div>
+    </div>
+</div>
