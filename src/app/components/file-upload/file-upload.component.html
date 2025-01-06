@@ -1,0 +1,7 @@
+<div class="flex items-center justify-center p-4 bg-gray-100 rounded-md">
+    <input type="file" (change)="onFileChange($event)" class="hidden" #fileInput />
+    <button (click)="fileInput.click()" class="px-4 py-2 text-white bg-blue-500 rounded-md">
+        Upload File
+    </button>
+    <span class="ml-2">{{ fileName }}</span>
+</div>
