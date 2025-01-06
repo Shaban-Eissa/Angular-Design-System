@@ -1,0 +1,7 @@
+<div class="relative inline-block">
+    <img [src]="src" [alt]="alt" class="w-12 h-12 rounded-full" />
+    <div *ngIf="status" [ngClass]="{
+      'bg-green-500': status === 'online',
+      'bg-gray-500': status === 'offline'
+    }" class="absolute bottom-0 right-0 w-3 h-3 border-2 border-white rounded-full"></div>
+</div>
