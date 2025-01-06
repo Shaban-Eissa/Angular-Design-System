@@ -1,0 +1,13 @@
+<div class="relative overflow-hidden rounded-lg">
+    <div class="flex transition-transform duration-300" [ngStyle]="{ transform: 'translateX(' + offset + 'px)' }">
+        <div *ngFor="let item of items" class="flex-shrink-0 w-full">
+            <img [src]="item" class="object-cover w-full h-64" />
+        </div>
+    </div>
+    <button (click)="prev()" class="absolute left-[5px] p-2 text-white transform -translate-y-1/2 bg-gray-800 rounded-md top-1/2">
+        &lt;
+    </button>
+    <button (click)="next()" class="absolute right-[5px] p-2 text-white transform -translate-y-1/2 bg-gray-800 rounded-md top-1/2">
+        &gt;
+    </button>
+</div>
