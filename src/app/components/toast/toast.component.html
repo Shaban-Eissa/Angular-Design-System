@@ -1,0 +1,6 @@
+<div *ngIf="isVisible" [ngClass]="{
+    'bg-green-500': type === 'success',
+    'bg-red-500': type === 'error'
+  }" class="fixed px-4 py-2 text-white rounded-md bottom-4 right-4">
+    {{ message }}
+</div>
