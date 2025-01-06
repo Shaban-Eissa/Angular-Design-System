@@ -1,0 +1,10 @@
+<nav class="flex justify-center">
+    <ul class="flex items-center space-x-2">
+        <li *ngFor="let page of pages" (click)="selectPage(page)" [ngClass]="{
+        'bg-blue-500 text-white': currentPage === page,
+        'bg-gray-200 text-gray-700': currentPage !== page
+      }" class="px-3 py-1 rounded-md cursor-pointer">
+            {{ page === '...' ? '...' : page }}
+        </li>
+    </ul>
+</nav>
