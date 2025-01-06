@@ -1,0 +1,11 @@
+<div class="flex border-b">
+    <button *ngFor="let tab of tabs; let i = index" (click)="selectTab(i)" [ngClass]="{
+      'border-blue-500 text-blue-500': activeTab === i,
+      'border-transparent text-gray-500': activeTab !== i
+    }" class="px-4 py-2 border-b-2 focus:outline-none">
+        {{ tab }}
+    </button>
+</div>
+<div class="p-4">
+    <ng-content></ng-content>
+</div>
