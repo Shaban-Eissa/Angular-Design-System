@@ -1,5 +1,7 @@
 # Angular Design System
 
+![images](https://github.com/user-attachments/assets/8611a5f9-b387-471b-8a34-ddf1a66f054d)
+
 A **custom design system** built with **Angular** and **Tailwind CSS**. This project includes reusable, highly customizable components like buttons, badges, alerts, accordions, and a date picker. It’s designed to help you quickly build consistent and beautiful UIs for your Angular applications.
 
 ## Features
